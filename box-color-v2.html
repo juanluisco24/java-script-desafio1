@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Color</title>
+
+    <style>
+
+        #box {
+            width: 170px;
+            height: 170px;
+            background-color: red;
+        }
+
+    </style>
+
+</head>
+
+<body id="body">
+
+    <div id="box"></div>
+
+    <button id="green"> Verde </button>
+    <button id="yellow"> Amarillo </button>
+    <button id="red"> Rojo </button>
+    <button id="400px"> 400x400 </button>
+    <button id="100px"> 100x100 </button>
+
+    <script>
+
+        var caja = document.getElementById("box");
+        var verde = document.getElementById('green');
+        var amarillo = document.getElementById('yellow');
+        var rojo = document.getElementById('red');
+
+        verde.addEventListener('click', function (){
+            cambiar_color("green");
+        });
+
+        amarillo.addEventListener('click', function (){
+            cambiar_color("yellow");
+        });
+
+        rojo.addEventListener('click', function (){
+            cambiar_color("red");
+        });
+
+        function cambiar_color(color) {
+            caja.style.backgroundColor = color;
+        }
+
+        var pixeles400 = document.getElementById("400px");
+        var pixeles100 = document.getElementById('100px');
+
+        function cambiar_tamaño(tamaño) {
+            caja.style.width = tamaño + 'px';
+            caja.style.height = tamaño + 'px';
+        }
+
+        pixeles100.addEventListener('click', function (){
+            cambiar_tamaño(100);
+        });
+
+        pixeles400.addEventListener('click', function (){
+            cambiar_tamaño(400);
+        });
+
+
+    </script>
+
+
+
+</body>
+
+</html>

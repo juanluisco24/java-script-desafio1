@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores v3</title>
+
+    <style>
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .green {
+            color: green;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <p id="par-1" onclick="document.getElementById('par-2').classList.toggle('red')"> 1 </p>
+    <p id="par-2" onclick="document.getElementById('par-4').classList.toggle('blue')"> 2 </p>
+    <p id="par-3" onclick="document.getElementById('par-3').classList.toggle('green')"> 3 </p>
+    <p id="par-4"> 4 </p>
+
+</body>
+
+</html>
